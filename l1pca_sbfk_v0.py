@@ -1,7 +1,8 @@
 #! /usr/bin/python
 #----------------------------------------------------------------------#
-# 
+# ---
 # Date: April 2018
+# ---
 #	
 # Author: Konstantinos Tountas
 # Research Assistant and Ph.D. Candidate, Dep. of Electrical and Computer Eng. & Computer Science
@@ -10,7 +11,34 @@
 # Email: ktountas2017@fau.edu
 # Web: https://ktountas.github.io/
 #
-# Dependencies:
+# ---
+# Reference:
+# This script approximates the optimal L1-principal components of real-valued data,
+# as presented in the article:
+# P. P. Markopoulos, S. Kundu, S. Chamadia, and D. A. Pados, 
+# ``Efficient L1-norm Principal-Component Analysis via Bit Flipping" 
+# in IEEE Transactions on Signal Processing, vol. 65, no. 16, pp. 4252-4264, 15 Aug.15, 2017.
+#
+# ---
+# Function Description:
+# Inputs: X => Fat data matrix,
+#		  K => subspace dimensionality,
+#		  num_init => number initializations,
+#	      print_flag => print statistics option.
+# Outputs: Q => L1-PCs, 
+#		   B => Binary nuc-norm solution,
+#		   vmax => L1-norm PCA value.
+# 
+# ---
+# Dependencies: 
+#	1) scipy (publicly available from: https://www.scipy.org/install.html)
+#
+# ---
+# Note:
+# Inquiries regarding the script provided below are cordially welcome.
+# In case you spot a bug, please let me know.
+# If you use some piece of code for your own work, please cite the
+# corresponding article above.
 # 
 #----------------------------------------------------------------------#
 
@@ -18,7 +46,7 @@ import numpy as np
 import time
 from scipy.linalg import svd
 
-def l1pca_sbfk(X, K, L, print_flag):
+def l1pca_sbfk(X, K, num_init, print_flag):
 	# Parameters
 	toler =10e-8;
 
@@ -28,16 +56,19 @@ def l1pca_sbfk(X, K, L, print_flag):
 	N = dataset_matrix_size[1]	# Column dimension.
 
 	# Initialize the matrix with the SVD.
-	U_x, S_x, V_x = svd(X , full_matrices = False)	# Hfloat: The singular values are in vector form.
+	dummy, S_x, V_x = svd(X , full_matrices = False)	# Hint: The singular values are in vector form.
+	if D < N:
+		V_x = V_x.transpose()
+		
 	X_t = np.matmul(np.diag(S_x),V_x.transpose())
 
 	# Initialize the required matrices and vectors.
 	Bprop = np.ones((N,K),dtype=float)
 	nucnormmax = 0
-	iterations = np.zeros((1,L),dtype=float)
+	iterations = np.zeros((1,num_init),dtype=float)
 
 	# For each initialization do.
-	for ll in range(0, L):
+	for ll in range(0, num_init):
 		
 		start_time = time.time()	# Start measuring execution time.
 
@@ -116,4 +147,4 @@ def l1pca_sbfk(X, K, L, print_flag):
 		print "Metric value:", vmax
 		print "--------------------------------------"
 
-	return Qprop, Bprop
+	return Qprop, Bprop, vmax
