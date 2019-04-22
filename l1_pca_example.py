@@ -35,7 +35,6 @@
 # corresponding article above.
 # 
 #----------------------------------------------------------------------#
-
 from l1pca_sbfk_v0 import *
 from array import *
 
@@ -54,7 +53,7 @@ def main():
 	# Call the L1-norm PCA function.
 	Q, B, vmax= l1pca_sbfk(X, rank_r, num_init, print_flag)
 
-	print Q # Print the calculated subspace matrix.
+	print(Q) # Print the calculated subspace matrix.
 
 if __name__ == '__main__':
 	try:

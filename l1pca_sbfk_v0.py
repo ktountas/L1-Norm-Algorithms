@@ -41,7 +41,6 @@
 # corresponding article above.
 # 
 #----------------------------------------------------------------------#
-
 import numpy as np
 import time
 from scipy.linalg import svd
@@ -141,10 +140,10 @@ def l1pca_sbfk(X, K, num_init, print_flag):
 	
 	# If print true, print execution statistics.
 	if print_flag:
-		print "--------------------------------------"
-		print "Avg. iterations/initialization: ", (convergence_iter)
-		print "Time elapsed (sec): ", (timelapse)
-		print "Metric value:", vmax
-		print "--------------------------------------"
+		print("------------------------------------------")
+		print("Avg. iterations/initialization: ", (convergence_iter))
+		print("Time elapsed (sec): ", (timelapse))
+		print("Metric value:", vmax)
+		print("------------------------------------------")
 
 	return Qprop, Bprop, vmax
