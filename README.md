@@ -5,8 +5,8 @@ The original matrix algorithm was developed and published by P. P. Markopoulos, 
 
 The original tensor algorithm was developed and published by K. Tountas, D. A. Pados, M. J. Medley, ["Conformity Evaluation and L1-norm Principal-Component Analysis of Tensor Data"](https://ktountas.github.io/pdf/spie_2019.pdf), in SPIE Big Data: Learning, Analytics, and Applications Conf., SPIE Defence and Commercial Sensing, Baltimore, MD, 2019.
 
-The entry point for the matrix case is the file l1_pca_example.py.
-The entry point for the tensor case is the file ir_tensor_l1pca_example.py.
+The entry point for the matrix algorithm is the file l1_pca_example.py.
+The entry point for the tensor algorithm is the file ir_tensor_l1pca_example.py.
 
 We have tested the code on Python 3.7.*. The prerequisite packages to run it are: 
 - scipy (publicly available from: https://www.scipy.org/install.html)
