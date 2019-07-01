@@ -28,4 +28,4 @@ We have tested the code on MatlabR2019a. The prerequisite packages to run it are
 - Tensor Toolbox Version 2.6 (can be downloaded from: http://www.sandia.gov/~tgkolda/TensorToolbox/index-2.6.html)
 - L1-PCA Toolbox (can be downloaded from: https://www.mathworks.com/matlabcentral/fileexchange/64855-l1-pca-toolbox)
 
-List of files included: l1_pca_example.m, l1pca_sbfk_v0.m, ir_tensor_l1pca_v0.m, ir_tensor_l1pca_example.m
+List of files included: l1_pca_example.m, l1pca_BF.m, ir_tensor_l1pca_stable.m, ir_tensor_l1pca_example.m
