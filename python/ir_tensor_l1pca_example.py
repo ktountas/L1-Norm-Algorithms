@@ -33,7 +33,9 @@
 # If you use some piece of code for your own work, please cite the
 # corresponding article above.
 # 
-#----------------------------------------------------------------------#	
+#----------------------------------------------------------------------#
+import sys
+sys.path.insert(1,'../lib')	
 from ir_tensor_l1pca_v0 import *
 
 def main():
@@ -50,8 +52,6 @@ def main():
 
 	# Create a random tensor of dimension DxLxN.
 	X = np.random.randn(D, L, N)
-	#X = [[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]]
-	#X = np.asarray(X)
 
 	# The weights corresponding to each dimension.
 	A = [1/3, 1/3, 1/3]
@@ -60,8 +60,14 @@ def main():
 	Q, W = ir_tensor_l1pca(X, rank_r, A, n_max, num_init, print_flag)
 
 	# Print the calculated subspace matrices.
+	print('Calculated subspaces:')
 	for ii in range(0, len(X.shape)):
-		print(Q[ii]) 
+		print(Q[ii])
+
+	# Print the calculated conformity values.
+	print('Calculated confomrmity values:')
+	for ii in range(0, len(W.shape)):
+		print(W[ii]) 
 
 if __name__ == '__main__':
 	try:

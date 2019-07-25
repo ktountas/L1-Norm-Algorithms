@@ -35,6 +35,8 @@
 # corresponding article above.
 # 
 #----------------------------------------------------------------------#
+import sys
+sys.path.insert(1,'../lib')
 from l1pca_sbfk_v0 import *
 from array import *
 
@@ -42,8 +44,9 @@ def main():
 	# Parameters:
 	rank_r = 2	    	# Number of L1-norm principal components.
 	num_init = 10 		# Number of initializations.
-	print_flag = True	# Print statistics True/False.
+	print_flag = True	# Print decomposition statistics (True/False).
 	
+	# Matrix dimensions.
 	D = 6				# Matrix row dimension.
 	N = 9				# Matrix column dimension
 
