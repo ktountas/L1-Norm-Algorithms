@@ -1,9 +1,9 @@
 # L1-Norm-Algorithms
 The current repository provides the code for the popular L1-norm Pricipal Component Analysis for matrix and tensor data sets.
 
-The original matrix algorithm was developed and published by P. P. Markopoulos, S. Kundu, S. Chamadia and D. A. Pados, ["Efficient L1-Norm Principal-Component Analysis via Bit Flipping"](https://ieeexplore.ieee.org/document/7934025), in IEEE Transactions on Signal Processing, vol. 65, no. 16, pp. 4252-4264, 15 Aug.15, 2017.
+The original matrix algorithm was developed and published by P. P. Markopoulos, S. Kundu, S. Chamadia and D. A. Pados, ["Efficient L1-Norm Principal-Component Analysis via Bit Flipping"](https://ieeexplore.ieee.org/document/7934025), in IEEE Transactions on Signal Processing, vol. 65, no. 16, pp. 4252-4264, Aug. 2017.
 
-The original tensor algorithm was developed and published by K. Tountas, D. A. Pados, M. J. Medley, ["Conformity Evaluation and L1-norm Principal-Component Analysis of Tensor Data"](https://ktountas.github.io/pdf/spie_2019.pdf), in SPIE Big Data: Learning, Analytics, and Applications Conf., SPIE Defence and Commercial Sensing, Baltimore, MD, 2019.
+The original tensor algorithm was developed and published by K. Tountas, D. A. Pados, M. J. Medley, ["Conformity Evaluation and L1-norm Principal-Component Analysis of Tensor Data"](https://ktountas.github.io/pdf/spie_2019.pdf), in SPIE Big Data: Learning, Analytics, and Applications Conf., SPIE Defence and Commercial Sensing, Baltimore, MD, Mar. 2019.
 
 ## Python Implementation:
 
