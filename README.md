@@ -7,8 +7,8 @@ The tensor algorithm was developed and published by K. Tountas, D. A. Pados, M. 
 
 ## Python Implementation:
 
-The entry point for the matrix algorithm is the file l1_pca_example.py.
-The entry point for the tensor algorithm is the file ir_tensor_l1pca_example.py.
+The entry point for the matrix decomposition algorithm is the file l1_pca_example.py.
+The entry point for the tensor decomposition algorithm is the file ir_tensor_l1pca_example.py.
 
 We have tested the code on Python 3.7.*. The prerequisite packages to run it are: 
 - scipy (publicly available from: https://www.scipy.org/install.html)
@@ -21,8 +21,8 @@ List of files included: l1_pca_example.py, l1pca_sbfk_v0.py, ir_tensor_l1pca_v0.
 
 ## MATLAB Implementation:
 
-The entry point for the matrix algorithm is the file l1_pca_example.m.
-The entry point for the tensor algorithm is the file ir_tensor_l1pca_example.m.
+The entry point for the matrix decomposition algorithm is the file l1_pca_example.m.
+The entry point for the tensor decomposition algorithm is the file ir_tensor_l1pca_example.m.
 
 We have tested the code on MatlabR2019a. The prerequisite packages to run it are:
 - Tensor Toolbox Version 2.6 (can be downloaded from: http://www.sandia.gov/~tgkolda/TensorToolbox/index-2.6.html)
