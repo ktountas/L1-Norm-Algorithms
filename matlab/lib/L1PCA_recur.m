@@ -4,8 +4,6 @@
 % ---
 % Author:
 % Konstantinos Tountas, Ph.D.
-% Applied Scientist
-% Amazon
 
 % ---
 % Reference:
