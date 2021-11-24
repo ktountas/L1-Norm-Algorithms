@@ -66,8 +66,7 @@ def main():
 
 	# Print the calculated conformity values.
 	print('Calculated confomrmity values:')
-	for ii in range(0, len(W.shape)):
-		print(W[ii]) 
+	print(W) 
 
 if __name__ == '__main__':
 	try:
